@@ -1,0 +1,63 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_000001f056209a20 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000001f056436240 .scope module, "tb_mux2" "tb_mux2" 3 3;
+ .timescale -9 -12;
+v000001f056436600_0 .var "d0", 3 0;
+v000001f056434f60_0 .var "d1", 3 0;
+v000001f056435000_0 .var "s", 0 0;
+v000001f0564350a0_0 .net "y", 3 0, L_000001f056435140;  1 drivers
+S_000001f0564363d0 .scope module, "uut" "mux2" 3 9, 4 1 0, S_000001f056436240;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "d0";
+    .port_info 1 /INPUT 4 "d1";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 4 "y";
+v000001f056402c40_0 .net "d0", 3 0, v000001f056436600_0;  1 drivers
+v000001f056209bb0_0 .net "d1", 3 0, v000001f056434f60_0;  1 drivers
+v000001f056209640_0 .net "s", 0 0, v000001f056435000_0;  1 drivers
+v000001f056436560_0 .net "y", 3 0, L_000001f056435140;  alias, 1 drivers
+L_000001f056435140 .functor MUXZ 4, v000001f056436600_0, v000001f056434f60_0, v000001f056435000_0, C4<>;
+    .scope S_000001f056436240;
+T_0 ;
+    %vpi_call/w 3 14 "$dumpfile", "mux2.vcd" {0 0 0};
+    %vpi_call/w 3 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001f056436240 {0 0 0};
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000001f056436600_0, 0, 4;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v000001f056434f60_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f056435000_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call/w 3 20 "$display", "s=%b d0=%b d1=%b y=%b", v000001f056435000_0, v000001f056436600_0, v000001f056434f60_0, v000001f0564350a0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001f056435000_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call/w 3 25 "$display", "s=%b d0=%b d1=%b y=%b", v000001f056435000_0, v000001f056436600_0, v000001f056434f60_0, v000001f0564350a0_0 {0 0 0};
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v000001f056436600_0, 0, 4;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000001f056434f60_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f056435000_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call/w 3 30 "$display", "s=%b d0=%b d1=%b y=%b", v000001f056435000_0, v000001f056436600_0, v000001f056434f60_0, v000001f0564350a0_0 {0 0 0};
+    %vpi_call/w 3 32 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_mux.sv";
+    "mux.sv";

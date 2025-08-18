@@ -1,0 +1,80 @@
+$date
+	Mon Aug 18 19:00:59 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_example $end
+$var wire 1 ! y $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$scope module dut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % n1 $end
+$var wire 1 & n2 $end
+$var wire 1 ' n3 $end
+$var wire 1 ! y $end
+$var wire 1 ( cb $end
+$var wire 1 ) bb $end
+$var wire 1 * ab $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x*
+x)
+x(
+x'
+x&
+x%
+0$
+0#
+0"
+x!
+$end
+#1000
+1*
+1)
+1(
+#2000
+0'
+0&
+#3000
+1%
+#7000
+1!
+#10000
+1$
+1"
+#11000
+0*
+0(
+#12000
+1'
+#13000
+0%
+#20000
+0$
+1#
+#21000
+0)
+1(
+#22000
+0'
+#26000
+0!
+#30000
+1$
+#31000
+0(
+#40000
